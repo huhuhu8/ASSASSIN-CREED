@@ -22,7 +22,7 @@ def load_data(data_parent_dir, class_names):
 
         for image_file in image_files:
             image_path = os.path.join(class_folder, image_file)
-            img = load_img(image_path, target_size=(128, 128))
+            img = load_img(image_path, target_size=(224, 224))
             img = img_to_array(img)
             img = img.astype('float32') / 255.0
             x_train.append(img)
@@ -34,7 +34,7 @@ def load_data(data_parent_dir, class_names):
 
         for image_file in image_files:
             image_path = os.path.join(class_folder, image_file)
-            img = load_img(image_path, target_size=(128, 128))
+            img = load_img(image_path, target_size=(224, 224))
             img = img_to_array(img)
             img = img.astype('float32') / 255.0
             x_test.append(img)
